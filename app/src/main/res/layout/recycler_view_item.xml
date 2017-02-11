@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="item"
+            type="com.example.tommy.ilovezappos.entity.ItemModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/prodname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{item.itemName != null ? item.itemName : " " }'/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prodname"
+            android:text="@{item.price}"/>
+
+
+    </RelativeLayout>
+</layout>
